@@ -54,7 +54,7 @@
 <script>
     var status = "{{$status}}";
     //js轮询
-    var t = setInterval("check();",2000);
+    var t = setInterval("check();",5000);
     function check()
     {
         $.ajax({
