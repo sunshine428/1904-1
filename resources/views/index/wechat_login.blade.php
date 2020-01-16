@@ -45,7 +45,7 @@
 <!-- 全局js -->
 {{--<script src="{{asset('hadmin/js/jquery.min.js?v=2.1.4')}}"></script>--}}
 {{--<script src="{{asset('hadmin/js/bootstrap.min.js?v=3.3.6')}}"></script>--}}
-<script src="{{asset('/js/jquery.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 
 </body>
 
