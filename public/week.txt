@@ -1,0 +1,9 @@
+<xml>
+  <ToUserName><![CDATA[toUser]]></ToUserName>
+  <FromUserName><![CDATA[o3y6ow3hkD1vfJYHP6hX-4okAC_4]]></FromUserName>
+  <CreateTime>123456789</CreateTime>
+  <MsgType><![CDATA[event]]></MsgType>
+  <Event><![CDATA[subscribe]]></Event>
+  <EventKey><![CDATA[qrscene_b9f227dc973966adb5209cc14f83be1c]]></EventKey>
+  <Ticket><![CDATA[TICKET]]></Ticket>
+</xml>
