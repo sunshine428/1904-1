@@ -22,8 +22,10 @@ Route::any('/ym/wechat', 'Admin\LoginController@wechat');
 Route::any('/ym/event', 'Admin\LoginController@event');
 Route::any('/ym/checkWechatLogin', 'Admin\LoginController@checkWechatLogin');
 Route::any('/ym/index', 'Admin\LoginController@index');
+
+Route::any('index', 'Admin\AdminLoginController@index');
 Route::domain('admin.liujinyue.com')->group(function () {
-    Route::any('index', 'Admin\AdminLoginController@index');
+
     Route::get('/', function () {
         return view('api/wechat/wechat_debug');
     });
