@@ -61,7 +61,7 @@ class LoginController extends Controller
     }
     public function event(){
         $info =file_get_contents("php://input");
-        file_put_contents("week.txt",$info);
+//        file_put_contents("week.txt",$info);
         $arr_obj=simplexml_load_string($info,"SimpleXMLElement",LIBXML_NOCDATA);
         //判断用户是否关注
         if($arr_obj->MsgType == 'event' && $arr_obj->Event=='subscribe'){
