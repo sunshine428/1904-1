@@ -11,7 +11,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
+    {{--<link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('hadmin/css/bootstrap.min.css?v=3.3.6')}}" rel="stylesheet">--}}
+    {{--<link href="{{asset('hadmin/css/font-awesome.css?v=4.4.0')}}" rel="stylesheet">--}}
 
+    {{--<link href="{{asset('hadmin/css/animate.css')}}" rel="stylesheet">--}}
+    {{--<link href="{{asset('hadmin/css/style.css?v=4.1.0')}}" rel="stylesheet">--}}
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
@@ -38,6 +42,10 @@
     </div>
 </div>
 
+<!-- 全局js -->
+{{--<script src="{{asset('hadmin/js/jquery.min.js?v=2.1.4')}}"></script>--}}
+{{--<script src="{{asset('hadmin/js/bootstrap.min.js?v=3.3.6')}}"></script>--}}
+<script src="{{asset('js/jquery.min.js')}}"></script>
 
 </body>
 
@@ -46,5 +54,24 @@
 <script>
     var status = "{{$status}}";
     //js轮询
-   
+    var t = setInterval("check();",2000);
+    function check()
+    {
+        $.ajax({
+            url:"{{url('ym/checkWechatLogin')}}",
+            dataType:"json",
+            type:'post',
+            data:{status:status},
+            success:function(res){
+                //返回提示
+                if(res.ret == 1){
+                    // //关闭定时器
+                    clearInterval(t);
+                    // //扫码登录成功
+                    alert(res.msg);
+                    location.href = "{{url('index')}}";
+                }
+            }
+        })
+    }
 </script>
