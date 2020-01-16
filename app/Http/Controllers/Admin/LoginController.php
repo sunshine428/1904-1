@@ -54,7 +54,6 @@ class LoginController extends Controller
 //       dd($a);
     }
     public function wechat(){
-         \Cache::forget('access_token');die;
         $status=md5(uniqid());
         echo $status;
         $ticket=Wechat::creatempQrcode($status);
