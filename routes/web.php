@@ -18,6 +18,9 @@
 //});
 
 Route::any('/ym/login', 'Admin\LoginController@login');
+
+Route::any('/ym/login_do', 'Admin\LoginController@login_do');
+
 Route::any('/ym/wechat', 'Admin\LoginController@wechat');
 Route::any('/ym/event', 'Admin\LoginController@event');
 Route::any('/ym/checkWechatLogin', 'Admin\LoginController@checkWechatLogin');
@@ -30,7 +33,7 @@ Route::domain('admin.liujinyue.com')->group(function () {
         return view('api/wechat/wechat_debug');
     });
 
-    Route::any('/ym/login_do', 'Admin\LoginController@login_do');
+
 });
 
 Route::domain('api.liujinyue.com')->namespace('Api')->middleware('apis')->group(function () {
