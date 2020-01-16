@@ -46,24 +46,5 @@
 <script>
     var status = "{{$status}}";
     //js轮询
-    var t = setInterval("check();",2000);
-    function check()
-    {
-        $.ajax({
-            url:"{{url('ym/checkWechatLogin')}}",
-            dataType:"json",
-            type:'post',
-            data:{status:status},
-            success:function(res){
-                //返回提示
-                if(res.ret == 1){
-                    // //关闭定时器
-                    clearInterval(t);
-                    // //扫码登录成功
-                    alert(res.msg);
-                    location.href = "{{url('index')}}";
-                }
-            }
-        })
-    }
+   
 </script>
