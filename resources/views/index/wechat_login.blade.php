@@ -52,7 +52,6 @@
 
 </html>
 <script>
-    alert(123);
     var status = "{{$status}}";
     //js轮询
     var t = setInterval("check();",2000);
@@ -61,6 +60,7 @@
         $.ajax({
             url:"{{url('ym/checkWechatLogin')}}",
             dataType:"json",
+            type:'post',
             data:{status:status},
             success:function(res){
                 //返回提示
