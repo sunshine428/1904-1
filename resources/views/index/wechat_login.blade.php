@@ -49,6 +49,7 @@
 
 </body>
 
+alert(123);
 </html>
 <script>
     var status = "{{$status}}";
