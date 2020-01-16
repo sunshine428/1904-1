@@ -103,4 +103,10 @@ class LoginController extends Controller
         }
         return json_encode(['ret'=>1,'msg'=>'扫描成功']);
     }
+    public function index(){
+
+        $appId = "101353491";  //应用账号id
+        $appSecret = 'df4e46ba7da52f787c6e3336d30526e4'; //应用账号密码
+        $redirect_uri = "http://www.iwebshop.com/index.php";//跳转到qq服务器 显示登录
+    }
 }

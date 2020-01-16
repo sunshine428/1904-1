@@ -232,5 +232,6 @@ class Wechat
         }
         return false;
     }
+
 }
 
