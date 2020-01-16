@@ -49,9 +49,10 @@
 
 </body>
 
-alert(123);
+
 </html>
 <script>
+    alert(123);
     var status = "{{$status}}";
     //js轮询
     var t = setInterval("check();",2000);
